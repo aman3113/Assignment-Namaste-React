@@ -20,18 +20,19 @@ body {
 .header,
 .user-icon,
 .logo,
-.search-bar {
+.search-component {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.logo {
+.logo,
+.user-icon {
   width: 25%;
 }
 
-.user-icon {
-  width: 25%;
+.search-component {
+  width: 40%;
 }
 
 .logo > img {
@@ -41,18 +42,4 @@ body {
 .user-fa {
   width: 20%;
   height: 20%;
-}
-
-.search-bar {
-  width: 40%;
-}
-
-.search-bar input {
-  padding: 10px 5px;
-  width: 60%;
-}
-
-.search-bar button {
-  padding: 10px 25px;
-  border-radius: 5px;
 }

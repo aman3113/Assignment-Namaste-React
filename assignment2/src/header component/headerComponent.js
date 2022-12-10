@@ -1,4 +1,5 @@
 import { FaUser } from "react-icons/fa";
+import SearchComponent from "../search-bar/searchBar.js";
 import "./header.css";
 
 export default Header = () => {
@@ -10,15 +11,10 @@ export default Header = () => {
           alt="image"
         />
       </div>
-      <div className="search-bar">
-        <input
-          type="search"
-          id="search-input"
-          value={""}
-          placeholder="search here"
-        />
-        <button id="search-btn">Search</button>
+      <div className="search-component">
+        <SearchComponent />
       </div>
+
       <div className="user-icon">
         <FaUser className="user-fa" />
       </div>
