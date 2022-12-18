@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .search-bar {
@@ -10,12 +11,14 @@
 
 .search-bar input {
   padding: 10px 5px;
-  width: 70%;
+  width: 40%;
   font-size: 18px;
+  border-radius: 5px;
 }
 
 .search-bar button {
   padding: 10px 25px;
   border-radius: 5px;
   font-size: 18px;
+  cursor: pointer;
 }

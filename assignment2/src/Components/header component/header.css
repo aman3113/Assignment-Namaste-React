@@ -1,26 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  max-width: 100vw;
-}
-
 .header {
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 3px gray;
-  position: sticky;
-  top: 0;
+
   background-color: white;
+  padding: 20px;
 }
 
 .header,
 .user-icon,
 .logo,
-.search-component {
+.team-name {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,15 +21,15 @@ body {
   width: 25%;
 }
 
-.search-component {
+.team-name {
   width: 40%;
 }
 
 .logo > img {
-  width: 40%;
+  width: 60%;
 }
 
 .user-fa {
-  width: 20%;
-  height: 20%;
+  width: 15%;
+  height: 15%;
 }

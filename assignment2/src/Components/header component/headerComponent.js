@@ -1,5 +1,4 @@
 import { FaUser } from "react-icons/fa";
-import SearchComponent from "../search-bar/searchBar.js";
 import "./header.css";
 
 export default Header = () => {
@@ -7,12 +6,12 @@ export default Header = () => {
     <div className="header">
       <div className="logo">
         <img
-          src="https://thumbs.dreamstime.com/b/infinity-sign-two-hands-touching-each-other-infinite-frien-friendship-concept-forever-friends-vector-creative-logo-88350734.jpg"
+          src="https://lwfiles.mycourse.app/635a5db526fa77c557bab00d-public/c4377b05799f40987f16cacd43da014d.png"
           alt="image"
         />
       </div>
-      <div className="search-component">
-        <SearchComponent />
+      <div className="team-name">
+        <h1>STORM TROOPERS</h1>
       </div>
 
       <div className="user-icon">
