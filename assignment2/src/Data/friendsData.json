@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Aman",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Jacky",
+    "memberNumber": "1",
+    "currentAim": "Web Developer"
+  },
+  {
+    "name": "Vicky",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Ram Dev",
+    "memberNumber": "2",
+    "currentAim": "Web Developer"
+  },
+  {
+    "name": "Ujjwal",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Jugadi",
+    "memberNumber": "3",
+    "currentAim": "Web Developer"
+  },
+  {
+    "name": "Mohit",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Gandi",
+    "memberNumber": "4",
+    "currentAim": "IIT JAM"
+  },
+  {
+    "name": "Manish",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Chahal",
+    "memberNumber": "5",
+    "currentAim": "UPSC"
+  },
+  {
+    "name": "Bhanu",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Bhanumati",
+    "memberNumber": "6",
+    "currentAim": "IIT JAM"
+  },
+  {
+    "name": "Vaibhav",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Gomti",
+    "memberNumber": "7",
+    "currentAim": "Teacher"
+  },
+  {
+    "name": "Dikshit",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Mutheri",
+    "memberNumber": "8",
+    "currentAim": "MCA"
+  },
+  {
+    "name": "Ayan",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Hoddi",
+    "memberNumber": "9",
+    "currentAim": "CAT"
+  },
+  {
+    "name": "Tarun",
+    "image": "https://plus.unsplash.com/premium_photo-1661774723035-de53c21c9838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
+    "nickName": "Kabadi",
+    "memberNumber": "10",
+    "currentAim": "PUBG"
+  }
+]
