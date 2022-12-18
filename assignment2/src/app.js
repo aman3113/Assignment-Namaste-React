@@ -2,13 +2,18 @@ import Header from "./Components/header component/headerComponent.js";
 import Body from "./Components/bodyComponent/bodyComponent.js";
 import SearchBar from "./Components/search-bar/searchBar.js";
 import "./app.css";
+import userData from "./Data/userData.js";
+import { useState } from "react";
 
-export default App = () => (
-  <>
-    <div className="fixed">
-      <Header />
-      <SearchBar />
-    </div>
-    <Body />
-  </>
-);
+export default App = () => {
+  const [teamData, setTeamData] = useState(userData);
+  return (
+    <>
+      <div className="fixed">
+        <Header />
+        <SearchBar userData={userData} setTeamData={setTeamData} />
+      </div>
+      <Body teamData={teamData} />
+    </>
+  );
+};
