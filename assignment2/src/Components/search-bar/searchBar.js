@@ -14,9 +14,9 @@ export default SearchComponent = (props) => {
   function handleChange(e) {
     setSearchInput(() => e.target.value);
     setTeamData(() => searchedData);
-    console.log(searchInput);
+    console.log(searchInput + "     inside fn");
   }
-  console.log(searchInput);
+  console.log(searchInput + "      outside fn");
 
   return (
     <div className="search-bar">
