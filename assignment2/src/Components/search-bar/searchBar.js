@@ -7,16 +7,24 @@ export default SearchComponent = (props) => {
   //
   const { userData, setTeamData } = props;
   //
-  const searchedData = userData.filter((member) =>
-    member.developerName.toLowerCase().includes(searchInput)
-  );
+  const searchedData = userData.filter((member) => {
+    console.log(member.developerName.toLowerCase().includes(searchInput));
+    return member.developerName.toLowerCase().includes(searchInput);
+  });
 
   function handleChange(e) {
-    setSearchInput(() => e.target.value);
-    setTeamData(() => searchedData);
-    console.log(searchInput + "     inside fn");
+    setSearchInput(() => e.target.value.toLowerCase());
+    console.log(searchInput);
   }
-  console.log(searchInput + "      outside fn");
+
+  function handleKeyUp(e) {
+    if (searchedData.length > 0) {
+      setTeamData(() => searchedData);
+    } else {
+      setTeamData(() => userData);
+    }
+  }
+  console.log(searchedData);
 
   return (
     <div className="search-bar">
@@ -27,6 +35,7 @@ export default SearchComponent = (props) => {
         value={searchInput}
         placeholder="search here"
         onChange={handleChange}
+        onKeyUp={handleKeyUp}
       />
     </div>
   );

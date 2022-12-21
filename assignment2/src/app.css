@@ -13,3 +13,12 @@ body {
   top: 0;
   z-index: 5;
 }
+
+/* footer */
+
+footer {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: aliceblue;
+  text-align: center;
+}
