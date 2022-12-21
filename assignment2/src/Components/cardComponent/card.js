@@ -30,7 +30,7 @@ export default CardComponent = (props) => {
           connect!
         </p>
         <div className="social-handles">
-          <a href={linkedinProfile} className="linkedin-handle">
+          <a href={linkedinProfile} target="_blank" className="linkedin-handle">
             LINKEDIN
           </a>
           <a href={discordUserId} className="discord-handle">
