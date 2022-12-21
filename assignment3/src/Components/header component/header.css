@@ -1,0 +1,37 @@
+.header {
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 3px gray;
+  z-index: 5;
+  background-color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.header,
+.user-icon,
+.logo,
+.team-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo,
+.user-icon {
+  width: 25%;
+}
+
+.team-name {
+  width: 40%;
+}
+
+.logo > img {
+  width: 60%;
+}
+
+.user-fa {
+  width: 15%;
+  height: 15%;
+}
