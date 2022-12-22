@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +9,9 @@
 body {
   max-width: 100vw;
   position: relative;
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
 }
-
-/* .fixed {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-} */
 
 /* footer */
 
@@ -21,5 +19,15 @@ footer {
   padding: 10px;
   margin-top: 30px;
   background-color: aliceblue;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.page-not-found {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   text-align: center;
 }

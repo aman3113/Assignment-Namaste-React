@@ -5,10 +5,10 @@ export default SearchComponent = (props) => {
   //
   const [searchInput, setSearchInput] = useState("");
   //
-  const { userData, setTeamData } = props;
+  const { userData, setFilteredData, setMatchFound } = props;
   //
   const searchedData = userData.filter((member) => {
-    return member.name.toLowerCase().includes(searchInput);
+    return member?.name?.toLowerCase().includes(searchInput);
   });
 
   function handleChange(e) {
@@ -18,9 +18,10 @@ export default SearchComponent = (props) => {
 
   function handleKeyUp(e) {
     if (searchedData.length > 0) {
-      setTeamData(() => searchedData);
+      setFilteredData(() => searchedData);
+      setMatchFound(true);
     } else {
-      setTeamData(() => userData);
+      setMatchFound(false);
     }
   }
   console.log(searchedData);

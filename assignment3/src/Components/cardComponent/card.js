@@ -18,14 +18,18 @@ export default CardComponent = (props) => {
       </div>
       <div className="card-about">
         <h1 className="name">{name ? name : "No data"}</h1>
-        <h3 className="nickName">
+        <h3 className="location">
           {location ? location : "location not available"}
         </h3>
-        <p className="currentAim">{company ? company : "no details"}</p>
-        <p className="experience">Public_repos : {public_repos}</p>
+        <p className="company">{company ? company : "no details"}</p>
+        <p>
+          <span className="repos">Public_repos :</span> {public_repos}
+        </p>
       </div>
       <div className="card-explanation">
-        <p className="description">{bio}</p>
+        <p className="description">
+          {bio ? bio : `Heyy, I am ${name}. I am a React Developer.`}
+        </p>
         <div className="social-handles">
           <a href={email} target="_blank" className="linkedin-handle">
             EMAIL
