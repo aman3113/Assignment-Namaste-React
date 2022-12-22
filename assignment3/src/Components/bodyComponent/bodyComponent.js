@@ -4,7 +4,6 @@ import "./body.css";
 
 export default Body = (props) => {
   const { filteredData } = props;
-  console.log(filteredData);
   const card = filteredData.map((friend) => (
     <CardComponent data={friend} key={friend.id} />
   ));

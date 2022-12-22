@@ -13,7 +13,6 @@ export default SearchComponent = (props) => {
 
   function handleChange(e) {
     setSearchInput(() => e.target.value.toLowerCase());
-    console.log(searchInput);
   }
 
   function handleKeyUp(e) {
@@ -24,7 +23,6 @@ export default SearchComponent = (props) => {
       setMatchFound(false);
     }
   }
-  console.log(searchedData);
 
   return (
     <div className="search-bar">

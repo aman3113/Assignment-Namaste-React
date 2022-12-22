@@ -30,8 +30,6 @@ export default App = () => {
     setUserData(developerArray);
   }
 
-  console.log(userData);
-
   return (
     <>
       <Header />
