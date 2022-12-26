@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export default CardComponent = (props) => {
   const { avatar_url, name, location, company, public_repos, login } =
     props.data;
-  console.log(props.data);
   return (
     <Link to={`/users/${login}`}>
       <div className="card">

@@ -25,7 +25,8 @@ export default App = () => {
       const Json = await resp.json();
       developerArray.push(Json);
     }
-    setUserData(developerArray);
+    sessionStorage.setItem("developerArray", JSON.stringify(developerArray));
+    setUserData(JSON.parse(sessionStorage.getItem("developerArray")));
   }
 
   return (
