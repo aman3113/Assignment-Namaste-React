@@ -12,8 +12,12 @@ export default App = () => {
   //
   const [matchFound, setMatchFound] = useState(true);
   useEffect(() => {
-    getDevelopers();
-    setUserData(JSON.parse(sessionStorage.getItem("developerArray")));
+    async function getData() {
+      await getDevelopers();
+      setUserData(JSON.parse(sessionStorage.getItem("developerArray")));
+    }
+
+    getData();
   }, []);
 
   return (
