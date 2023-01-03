@@ -1,5 +1,5 @@
-import Body from "../Components/bodyComponent/bodyComponent.js";
-import SearchBar from "../Components/search-bar/searchBar.js";
+import Body from "../Components/bodyComponent.js";
+import SearchBar from "../Components/searchBar.js";
 import PageNotFound from "./AppLayout/PageNotFound";
 import "./app.css";
 import { getDevelopers } from "../Data/SharedFunctions.js";

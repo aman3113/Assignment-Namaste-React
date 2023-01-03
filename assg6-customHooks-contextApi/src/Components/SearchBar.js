@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import "./searchBar.css";
-import stateList from "../../Data/state-city.json";
-import useCities from "../Hooks/useCities";
+
+import stateList from "../Data/state-city.json";
+import useCities from "./useCities";
 
 export default SearchComponent = (props) => {
   //

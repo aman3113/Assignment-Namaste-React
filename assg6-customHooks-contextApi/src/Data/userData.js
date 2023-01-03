@@ -16,7 +16,7 @@ export default [
   },
   {
     github_login: "Swati27",
-    state: "",
+    state: "Unknown",
     city: "",
   },
   {
