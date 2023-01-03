@@ -32,9 +32,6 @@
     grid-template-columns: 55%;
   }
 
-  .search-bar input {
-    width: 60%;
-  }
   .team-name h1 {
     font-size: 24px;
   }
@@ -53,9 +50,10 @@
     grid-template-columns: auto;
   }
 
-  .search-bar input {
-    width: 60%;
+  .search-bar {
+    flex-direction: column;
   }
+
   .team-name h1 {
     font-size: 16px;
   }

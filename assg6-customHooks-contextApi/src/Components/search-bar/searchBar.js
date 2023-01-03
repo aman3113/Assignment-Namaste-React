@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./searchBar.css";
 import stateList from "../../Data/state-city.json";
 import useCities from "../Hooks/useCities";
@@ -14,12 +14,14 @@ export default SearchComponent = (props) => {
   const cityList = useCities(stateInput, stateList);
 
   // useEffect to handle change of cities and state
+  const firstRender = useRef(true);
 
   useEffect(() => {
-    if (searchedData.length > 0) {
-      setFilteredData(() => searchedData);
-      setMatchFound(true);
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
     }
+    getFilteredData();
   }, [stateInput, cityInput]);
 
   // Search filter functions
@@ -44,8 +46,7 @@ export default SearchComponent = (props) => {
 
   // searchInput handler
 
-  function handleKeyUp(e) {
-    e.preventDefault();
+  function getFilteredData() {
     if (searchedData.length > 0) {
       setFilteredData(() => searchedData);
       setMatchFound(true);
@@ -64,7 +65,7 @@ export default SearchComponent = (props) => {
         placeholder="search here"
         onChange={(e) => setSearchInput(() => e.target.value.toLowerCase())}
         onKeyDown={(e) => {
-          if (e.key === "Enter") return handleKeyUp(e);
+          if (e.key === "Enter") return getFilteredData();
         }}
       />
 
@@ -96,7 +97,7 @@ export default SearchComponent = (props) => {
           Select City
         </option>
         {cityList?.map((city) => {
-          city.replace("*", "");
+          city = city.replace("*", "");
           return (
             <option key={city} value={city}>
               {city}
