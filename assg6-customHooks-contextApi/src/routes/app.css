@@ -6,135 +6,120 @@
   box-sizing: border-box;
 }
 
+/* root colors */
+
+:root,
+[data-theme="light"] {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #edf2f7;
+  --color-bg-btn: #000;
+  --border: 2px solid black;
+  --box-shadow: 2px 2px 5px black;
+}
+
+[data-theme="dark"] {
+  --color-bg-primary: #15202b;
+  --color-bg-secondary: #283141;
+  --color-text-primary: #edf2f7;
+  --color-text-secondary: #687792;
+  --color-bg-btn: #fff;
+  --border: 1px solid #687792;
+  --box-shadow: none;
+}
+
 body {
   max-width: 100vw;
   position: relative;
   min-height: 100vh;
   font-family: "Nunito", sans-serif;
-  border: 2px solid black;
+  border: var(--border);
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
 }
 
 /* Header */
 
 .header {
-  box-shadow: 2px 2px 5px 3px gray;
+  box-shadow: var(--box-shadow);
   z-index: 5;
-  background-color: white;
-  padding: 20px;
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--box-shadow);
   position: sticky;
   top: 0;
 }
 
 .header,
-.user-icon,
-.logo,
-.team-name {
+.team-name,
+.team-logo {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.team-name a {
-  text-decoration: none;
-  color: black;
-}
-
-.logo,
-.user-icon {
-  width: 25%;
-}
-
-.user-icon a,
-.logo a {
-  width: 100%;
+.team-name,
+.team-logo,
+.team-nav {
+  width: 33%;
   height: 100%;
-  text-decoration: none;
-  text-align: center;
 }
 
+.team-logo,
 .team-name {
-  width: 40%;
-  text-align: center;
+  padding: 20px;
 }
 
-.logo a img {
-  width: 60%;
+.team-nav {
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
 
-.user-fa {
-  width: 15%;
-  height: 15%;
-  color: black;
+.team-nav a {
+  padding: 10px;
+  color: var(--color-bg-btn);
+}
+
+.theme-logo {
+  margin: 10px 30px;
+}
+
+.team-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 150px;
+}
+
+.team-name h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-bg-btn);
+}
+
+.theme-icon {
+  color: var(--color-bg-btn);
 }
 
 /* body components */
 
 .body-container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   align-items: center;
   justify-content: center;
   padding: 30px 50px 60px 50px;
-  z-index: -1;
 }
 
 .body-container a {
   text-decoration: none;
-}
-
-@media screen and (min-width: 1200px) {
-  .body-container {
-    grid-template-columns: 25% 25% 25%;
-  }
-}
-
-@media screen and (max-width: 1200px) and (min-width: 810px) {
-  .body-container {
-    grid-template-columns: 40% 40%;
-  }
-  .header {
-    padding: 10px 0;
-  }
-}
-
-@media screen and (max-width: 810px) and (min-width: 520px) {
-  .body-container {
-    grid-template-columns: 55%;
-  }
-
-  .team-name h1 {
-    font-size: 24px;
-  }
-  .logo,
-  .user-icon {
-    width: 70%;
-  }
-
-  .header {
-    padding: 30px 0;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .body-container {
-    grid-template-columns: auto;
-  }
-
-  .search-bar {
-    flex-direction: column;
-  }
-
-  .team-name h1 {
-    font-size: 16px;
-  }
-  .logo,
-  .user-icon {
-    width: 95%;
-  }
-
-  .header {
-    padding: 20px 0;
-  }
+  width: 300px;
 }
 
 /* Search bar */
@@ -152,15 +137,19 @@ select {
   padding: 5px;
   width: 30%;
   font-size: 14px;
+  font-weight: 500;
   border-radius: 5px;
+  border: 1px solid black;
   margin: 5px;
+  background-color: #edf2f7;
+  color: #2d3748;
 }
 
 /* Card component */
 
 .card {
   width: 100%;
-  box-shadow: 2px 2px 5px gray;
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -170,7 +159,7 @@ select {
 
 .card-image {
   width: 100%;
-  height: 55%;
+  height: 50%;
 }
 
 .card-image > img {
@@ -181,7 +170,7 @@ select {
 
 .card-about {
   width: 100%;
-  height: 45%;
+  height: 50%;
   padding: 20px;
   text-align: left;
   background-color: #457b9d;
@@ -212,7 +201,7 @@ select {
 }
 
 .card:hover {
-  box-shadow: 3px 3px 5px black;
+  box-shadow: var(--box-shadow);
   transform: translate(0, -10px);
   transition-delay: 0.2s;
 }
@@ -234,6 +223,7 @@ footer {
   top: 50%;
   width: 100%;
   text-align: center;
+  color: var(--color-bg-btn);
 }
 
 /* UsersPage  */
@@ -251,15 +241,17 @@ footer {
 .user-card {
   max-width: 500px;
   width: 55vw;
-  border: 3px solid green;
+  border: var(--border);
   position: relative;
   flex-direction: column;
   border-radius: 10px;
   padding: 90px 10px 10px 10px;
+  background-color: var(--color-bg-primary);
 }
 
 .image-div {
-  background: white;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
   width: 30%;
   position: absolute;
   top: 0;
@@ -270,12 +262,13 @@ footer {
 .user-img {
   width: 100%;
   border-radius: 50%;
-  box-shadow: 0px 0px 5px 5px gray;
+  box-shadow: var(--box-shadow);
   padding: 1px;
 }
 
 .user-name {
   padding-bottom: 10px;
+  color: var(--color-bg-btn);
 }
 
 .user-details {
@@ -285,10 +278,15 @@ footer {
 }
 
 .user-developer {
-  color: #324e63;
+  color: var(--color-text-primary);
+}
+
+.user-location {
+  color: #687792;
 }
 .user-details div {
   flex-direction: column;
+  color: var(--color-bg-btn);
 }
 
 .user-details div span {
@@ -308,17 +306,18 @@ footer {
 .react-icon {
   width: 40px;
   height: 40px;
-  color: black;
+  color: var(--color-bg-btn);
   cursor: pointer;
 }
 
 .bio {
   text-align: center;
+  color: #687792;
 }
 
 .react-icon:hover {
-  box-shadow: 0, 0, 2px 2px blueviolet;
-  color: gray;
+  box-shadow: var(--box-shadow);
+  color: var(--color-text-secondary);
 }
 
 /* Class Components */
@@ -329,8 +328,8 @@ footer {
   justify-content: center;
   gap: 30px;
   align-items: center;
-
-  margin: 30px 0 60px 0;
+  color: var(--color-bg-btn);
+  padding: 30px 0 60px 0;
 }
 
 .about-us p {
@@ -351,14 +350,14 @@ footer {
 
 .member-component a {
   text-decoration: none;
-  color: black;
+  color: var(--color-bg-btn);
 }
 
 .member-card {
   width: 250px;
   display: flex;
   align-items: center;
-  background-color: rgb(242, 239, 239);
+  background-color: var(--color-bg-secondary);
   padding: 30px;
   border-radius: 15px;
 }

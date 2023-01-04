@@ -4,14 +4,17 @@ import Header from "./headerComponent";
 import Footer from "./Footer.js";
 import ThemeContext from "../../Components/ThemeContext";
 export default function AppLayout() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   return (
-    <>
-      <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
+    <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
+      <div
+        className="body"
+        data-theme={`${theme === "light" ? "light" : "dark"}`}
+      >
         <Header />
         <Outlet />
         <Footer />
-      </ThemeContext.Provider>
-    </>
+      </div>
+    </ThemeContext.Provider>
   );
 }
