@@ -24,7 +24,7 @@ export class Member extends Component {
 
     return (
       <div className="member-component">
-        {this.state.developers.map((member) => (
+        {this.state.developers?.map((member) => (
           <Link to={`/users/${member.login}`}>
             <div key={member.id} className="member-card">
               <img src={member.avatar_url} alt="" />

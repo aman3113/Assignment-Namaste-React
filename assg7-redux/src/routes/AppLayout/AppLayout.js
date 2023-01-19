@@ -5,12 +5,12 @@ import Footer from "./Footer.js";
 import ThemeContext from "../../Components/ThemeContext";
 // redux
 import { Provider } from "react-redux";
-import Store from "../../Redux/Store";
+import store from "../../Redux/Store";
 
 export default function AppLayout() {
   const [theme, setTheme] = useState("light");
   return (
-    <Provider store={Store}>
+    <Provider store={store}>
       <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
         <div
           className="body"

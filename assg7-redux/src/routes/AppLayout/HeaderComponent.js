@@ -1,28 +1,27 @@
-import { useContext } from "react";
-import { FaUser } from "react-icons/fa";
+import { Link, Navigate } from "react-router-dom";
 import { BsFillMoonFill } from "react-icons/bs";
 import { MdOutlineLightMode } from "react-icons/md";
-import { Link } from "react-router-dom";
+// Context
+import { useContext } from "react";
 import ThemeContext from "../../Components/ThemeContext";
 // redux components import
 import { useSelector, useDispatch } from "react-redux";
-import { login, logout } from "../../Redux/userSlice";
+import { logoutUser } from "../../Redux/userSlice";
 
 export default Header = () => {
-  const userDetails = useSelector((store) => store.user);
-  const dispatch = useDispatch();
-  console.log(userDetails);
   const { theme, setTheme } = useContext(ThemeContext);
 
+  const { details, isLoggedIn } = useSelector((store) => store.user);
+  const dispatch = useDispatch();
+
   function handleUserLogin() {
-    dispatch(
-      login({
-        name: "Aman",
-        id: "aman3113",
-      })
-    );
-    console.log("clicked");
+    if (isLoggedIn) {
+      dispatch(logoutUser());
+    } else {
+      return <Navigate to="/login" replace />;
+    }
   }
+
   return (
     <div className="header">
       <div className="team-logo">
@@ -39,9 +38,11 @@ export default Header = () => {
       <div className="team-nav">
         <Link to={"/about-us"}>About US</Link>
         <Link to={"/"}>Home</Link>
+
         <p className="user-login" onClick={handleUserLogin}>
-          LOGIN
+          {isLoggedIn ? `Hello ${details.name} | Logout` : "Login"}
         </p>
+
         <div
           className="theme-logo"
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}

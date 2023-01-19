@@ -7,6 +7,8 @@ import App from "./routes/app.js";
 import ErrorElement from "./routes/AppLayout/ErrorElement";
 import AppLayout from "./routes/AppLayout/AppLayout.js";
 import UsersPage from "./routes/UsersPage.js";
+import Login from "./Components/LoginComponent.js";
+import ProtectedRoute from "./Components/ProtectedRoute.js";
 //class components
 const AboutUs = lazy(() => import("./routes/ClassComponents/AboutUs.js"));
 
@@ -18,7 +20,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <App />,
+        element: (
+          <ProtectedRoute>
+            <App />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "users",
@@ -35,6 +41,10 @@ const router = createBrowserRouter([
             <AboutUs />
           </Suspense>
         ),
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
