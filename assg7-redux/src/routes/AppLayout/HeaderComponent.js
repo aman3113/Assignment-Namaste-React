@@ -17,8 +17,10 @@ export default Header = () => {
   function handleUserLogin() {
     if (isLoggedIn) {
       dispatch(logoutUser());
+      <Navigate to={"/login"} replace />;
     } else {
-      return <Navigate to="/login" replace />;
+      console.log("clicked");
+      return <Navigate to={"/login"} replace />;
     }
   }
 

@@ -9,9 +9,35 @@ export default function Login() {
     emailInput: "",
     passwordInput: "",
   });
+  const [error, setError] = useState("");
 
   const isLoggedIn = useSelector((store) => store.user.isLoggedIn);
   const dispatch = useDispatch();
+
+  if (isLoggedIn) {
+    return <Navigate to={"/"} replace />;
+  }
+
+  function validateForm() {
+    if (!state.nameInput) {
+      setError("Your name is Required.");
+      return false;
+    }
+    if (!state.emailInput) {
+      setError("Email is Required.");
+      return false;
+    }
+    if (!state.passwordInput) {
+      setError("Please enter password.");
+      return false;
+    }
+    if (state.passwordInput.length < 8) {
+      setError("Password length should be minimum 8 characters.");
+      return false;
+    }
+
+    return true;
+  }
 
   function handleInputChange(e) {
     const { name, value } = e.target;
@@ -22,19 +48,18 @@ export default function Login() {
   }
 
   function handleSubmit(e) {
-    e.preventDefault;
-    dispatch(
-      loginUser({
-        name: state.nameInput,
-        email: state.emailInput,
-        password: state.passwordInput,
-      })
-    );
-    <Navigate to="/" replace />;
-  }
+    e.preventDefault();
 
-  if (isLoggedIn) {
-    return <Navigate to={"/"} replace />;
+    if (validateForm()) {
+      dispatch(
+        loginUser({
+          name: state.nameInput,
+          email: state.emailInput,
+          password: state.passwordInput,
+        })
+      );
+      <Navigate to="/" replace />;
+    }
   }
 
   return (
@@ -44,6 +69,7 @@ export default function Login() {
           type="text"
           placeholder="Enter your name"
           name="nameInput"
+          className="name-input"
           value={state.nameInput}
           onChange={(e) => handleInputChange(e)}
         />
@@ -61,6 +87,7 @@ export default function Login() {
           value={state.passwordInput}
           onChange={(e) => handleInputChange(e)}
         />
+        {error && <p className="error">{error}</p>}
         <button>Submit</button>
       </form>
     </div>
