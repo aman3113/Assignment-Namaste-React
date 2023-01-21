@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default CardComponent = (props) => {
+const CardComponent = (props) => {
   const { avatar_url, name, location, company, public_repos, login } =
     props.data;
   return (
@@ -23,3 +23,4 @@ export default CardComponent = (props) => {
     </Link>
   );
 };
+export default CardComponent;

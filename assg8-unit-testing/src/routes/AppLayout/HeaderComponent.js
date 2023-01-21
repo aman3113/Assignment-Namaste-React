@@ -8,7 +8,7 @@ import ThemeContext from "../../Components/ThemeContext";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutUser } from "../../Redux/userSlice";
 
-export default Header = () => {
+const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const { details, isLoggedIn } = useSelector((store) => store.user);
@@ -28,6 +28,7 @@ export default Header = () => {
     <div className="header">
       <div className="team-logo">
         <img
+          data-testid="logo"
           src="https://lwfiles.mycourse.app/635a5db526fa77c557bab00d-public/c4377b05799f40987f16cacd43da014d.png"
           alt="image"
         />
@@ -59,3 +60,5 @@ export default Header = () => {
     </div>
   );
 };
+
+export default Header;
